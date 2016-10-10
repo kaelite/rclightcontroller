@@ -4,9 +4,11 @@
  Turns on and off stops lights depending on signal from receiver.
 
 
- The circuit(TODO):
+ The circuit:
  * Element attached to PIN
-
+ * outer tail ligths (*.---.*) attached to pin 5 (PB0)
+ * inner tail lights (.*---*.) attached to pin 6 (PB1)
+ * RC Signal attached to pin 7 (PB2)
  created 10 Oct 2016
  by kaelite (kaelite@msn.com)
 */
@@ -14,9 +16,9 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define PIN_TAILLIGHTS_INS PB5
-#define PIN_TAILLIGHTS_OUTS PB4
-#define PIN_RCSINGAL  PB4
+#define PIN_TAILLIGHTS_INS PB1
+#define PIN_TAILLIGHTS_OUTS PB0
+#define PIN_RCSINGAL  PB2
 #define VALUE_THROTTLE_CENTER 1470
 #define VALUE_LIGHT_MODE_BRAKING 255
 #define VALUE_LIGHT_MODE_BACKUP  30
