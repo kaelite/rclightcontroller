@@ -35,7 +35,9 @@ signed short lastrunmode = 0;
 int main( void )
 {
 //Setup
-  DDRB |= (1<<5);       // устанавливаем вывод PB5 как выход
+  DDRB |= (1<<PIN_TAILLIGHTS_INS) | (1<<PIN_TAILLIGHTS_OUTS);       // settings up the outputs
+  DDRB &= ~(1<<PIN_RCSINGAL); //setting up the inputs
+  
 
 //Main cycle
   while(1){
